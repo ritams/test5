@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seven Wonders of the World</title>
+    <style>
+        :root {
+            --primary-green: #00B07B;
+            --primary-text: #FFFFFF;
+            --border-color: rgba(0, 176, 123, 0.48);
+            --padding-lg: 16px;
+            --padding-sm: 8px;
+            --gap-lg: 16px;
+            --gap-md: 8px;
+            --gap-sm: 4px;
+            --border-radius: 8px;
+            --border-width: 1px;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--primary-text);
+            background-color: #121212;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--padding-lg);
+        }
+        
+        header {
+            text-align: center;
+            padding: var(--padding-lg);
+            margin-bottom: var(--gap-lg);
+            border-bottom: var(--border-width) solid var(--border-color);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin: 0;
+        }
+        
+        .wonders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--gap-lg);
+            padding: var(--padding-lg) 0;
+        }
+        
+        .wonder-card {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            border: var(--border-width) solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .wonder-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 176, 123, 0.2);
+        }
+        
+        .wonder-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .wonder-info {
+            padding: var(--padding-lg);
+        }
+        
+        .wonder-title {
+            font-size: 1.5rem;
+            margin: 0 0 var(--gap-sm) 0;
+            color: var(--primary-green);
+        }
+        
+        .wonder-description {
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: var(--padding-lg);
+            margin-top: var(--gap-lg);
+            border-top: var(--border-width) solid var(--border-color);
+        }
+        
+        @media (max-width: 768px) {
+            .wonders-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Explore the World's Seven Wonders</h1>
+        </header>
+        
+        <div class="wonders-grid">
+            <div class="wonder-card">
+                <img src="https://fal.media/files/elephant/sUlgnkFC1wCZfEb4m7rfw_52784e6361b8489ba3227f908e82abab.jpg" alt="Great Wall of China" class="wonder-image">
+                <div class="wonder-info">
+                    <h2 class="wonder-title">Great Wall of China</h2>
+                    <p class="wonder-description">Built over 2,000 years ago, the Great Wall of China stretches approximately 13,170 miles from east to west of China, protecting the ancient Chinese empire from invasions.</p>
+                </div>
+            </div>
+            
+            <div class="wonder-card">
+                <img src="https://fal.media/files/zebra/QkjiFkMG8FdOVU5jY6f6z_cf8199e23dcd4ba5aee1a4b8f419f2b7.jpg" alt="Petra" class="wonder-image">
+                <div class="wonder-info">
+                    <h2 class="wonder-title">Petra</h2>
+                    <p class="wonder-description">Known as the "Rose City" due to the color of the stone, Petra was carved into the rose-colored sandstone cliffs by the Nabataeans around 312 BCE and served as their capital city.</p>
+                </div>
+            </div>
+            
+            <div class="wonder-card">
+                <img src="https://fal.media/files/zebra/TsZVuwMPYWqAEZggRH_uM_83443b79f28c4744a092644974d582bb.jpg" alt="Christ the Redeemer" class="wonder-image">
+                <div class="wonder-info">
+                    <h2 class="wonder-title">Christ the Redeemer</h2>
+                    <p class="wonder-description">Standing at 98 feet tall on top of Corcovado Mountain in Rio de Janeiro, this Art Deco statue of Jesus Christ was completed in 1931 and has become an emblematic symbol of Brazil.</p>
+                </div>
+            </div>
+            
+            <div class="wonder-card">
+                <img src="https://fal.media/files/tiger/f1zhGVAaf-KuBKeuu9Cyq_d1718622a1fb433abae0db51adbe4156.jpg" alt="Taj Mahal" class="wonder-image">
+                <div class="wonder-info">
+                    <h2 class="wonder-title">Taj Mahal</h2>
+                    <p class="wonder-description">Built by Emperor Shah Jahan in memory of his beloved wife, this ivory-white marble mausoleum in Agra, India was completed in 1643 and is considered a masterpiece of Mughal architecture.</p>
+                </div>
+            </div>
+            
+            <div class="wonder-card">
+                <img src="https://fal.media/files/lion/p419Vwlzo8ut5oPjRQhFg_937a625c69cf4e8fa2d9430ab9b4dce7.jpg" alt="Colosseum" class="wonder-image">
+                <div class="wonder-info">
+                    <h2 class="wonder-title">Colosseum</h2>
+                    <p class="wonder-description">Built in 80 AD, this massive amphitheater in Rome could hold up to 80,000 spectators who gathered to watch gladiatorial contests, mock sea battles, animal hunts, and executions.</p>
+                </div>
+            </div>
+            
+            <div class="wonder-card">
+                <img src="https://fal.media/files/zebra/Gy2LoVksCaXRZirm1_P7x_b48d3cdd1ed14fb2a9431263bd98bc21.jpg" alt="Machu Picchu" class="wonder-image">
+                <div class="wonder-info">
+                    <h2 class="wonder-title">Machu Picchu</h2>
+                    <p class="wonder-description">This 15th-century Inca citadel sits on a mountain ridge 7,970 feet above sea level in Peru. It was built around 1450 but abandoned a century later during the Spanish Conquest.</p>
+                </div>
+            </div>
+            
+            <div class="wonder-card">
+                <img src="https://fal.media/files/kangaroo/0EPkuTMGPAIqOdHEvx3YX_6ae43c1d5e11478ca74abf4367ce2f13.jpg" alt="Pyramids of Giza" class="wonder-image">
+                <div class="wonder-info">
+                    <h2 class="wonder-title">Pyramids of Giza</h2>
+                    <p class="wonder-description">The oldest of the Seven Wonders, these ancient Egyptian pyramids were built over 4,500 years ago as tombs for pharaohs. The Great Pyramid, built for Pharaoh Khufu, stood as the tallest man-made structure for nearly 4,000 years.</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            All Rights Reserved @2025
+        </footer>
+    </div>
+</body>
+</html>
